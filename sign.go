@@ -1,4 +1,4 @@
-package enigmasistem
+package enigma
 
 var SignsArray = []string{
 	"а",
