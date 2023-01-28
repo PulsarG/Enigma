@@ -78,19 +78,19 @@ func findNumberFromKey(arr []string) (int, int) {
 }
 
 // Перемешивание:
-func replacing(key1, key2, key3 int) ([52]string, [52]int, [52]int) {
+func replacing(key1, key2, key3 int) ([162]string, [162]int, [162]int) {
 	// Перемешиваем первым интом Базовый набор - ротор1
-	newBaseSign := replaceSignArray(key1, SignsArray)
+	newBaseSign := replaceSignArray(key1)
 	// Перемешиваем вторым интом второй Ротор2
-	newRotor2 := replaceRotor(key2, Mirror)
+	newRotor2 := replaceRotor(key2)
 	// Перемешиваем третьим интом третий Ротор3
-	newRotor3 := replaceRotor(key3, Mirror)
+	newRotor3 := replaceRotor(key3)
 
 	return newBaseSign, newRotor2, newRotor3
 }
 
 // Для каждого знака из массива строки:
-func crypting(signArr []string, Rotor1 [52]string, Rotor2, Rotor3 [52]int) string {
+func crypting(signArr []string, Rotor1 [162]string, Rotor2, Rotor3 [162]int) string {
 	var allResult string
 	for i := 0; i < len(signArr); i++ {
 		// Поиск Первого Индекса по знаку = х
@@ -108,7 +108,7 @@ func crypting(signArr []string, Rotor1 [52]string, Rotor2, Rotor3 [52]int) strin
 	return allResult
 }
 
-func findIndexInFirstRotor(s string, rotor [52]string) int {
+func findIndexInFirstRotor(s string, rotor [162]string) int {
 	var index int
 	for i := 0; i < len(rotor); i++ {
 		if rotor[i] == s {
@@ -121,7 +121,7 @@ func findIndexInFirstRotor(s string, rotor [52]string) int {
 	return index
 }
 
-func findIndexInRotor(s int, rotor [52]int) int {
+func findIndexInRotor(s int, rotor [162]int) int {
 	var index int
 	for i := 0; i < len(rotor); i++ {
 		if rotor[i] == s {
