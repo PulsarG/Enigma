@@ -1,4 +1,14 @@
-# Enigma
+# Enigma - Encryption system
+
+Work in progress.
+
+Currently available:
+
+> Russian alphabet in lowercase
+
+> all numbers
+
+> some symbols
 
 ## DOCS
 
