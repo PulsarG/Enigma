@@ -4,15 +4,19 @@ Work in progress.
 
 Currently available:
 
-> Russian alphabet in lowercase
+> Russian letters in upper and lower case
 
-> all numbers
+> English letters in upper and lower case.
 
-> some symbols
+> All numbers
 
-> space 
+> All symbols and characters of the standard keyboard
 
-> line break (Enter key)
+> Space 
+
+> Line break (Enter key)
+
+> There are 162 letters, signs and symbols in total.
 
 ## DOCS
 
@@ -45,9 +49,9 @@ Else:
 
 - invalid character message and character,
 
-* password too long message,
+* message that the password is too long,
 
-+ another error.
++ message that the password is missing (password is required)
 
 > bool - false
 
