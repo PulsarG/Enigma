@@ -10,6 +10,10 @@ Currently available:
 
 > some symbols
 
+> space 
+
+> line break (Enter key)
+
 ## DOCS
 
 Download and install:
