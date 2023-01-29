@@ -1,6 +1,6 @@
 package enigma
 
-var SignsArray = [162]string{
+var signsArray = [162]string{
 	"а",
 	"б",
 	"в",
@@ -165,7 +165,7 @@ var SignsArray = [162]string{
 	"\n",
 }
 
-var Mirror = [162]int{
+var mirror = [162]int{
 	161,
 	70,
 	14,

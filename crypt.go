@@ -58,16 +58,16 @@ func findNumberFromKey(arr []string) (int, int) {
 
 	var numFirstLiteral, numLastLiteral int
 
-	for i := 0; i < len(SignsArray); i++ {
-		if SignsArray[i] == firstLileral {
+	for i := 0; i < len(signsArray); i++ {
+		if signsArray[i] == firstLileral {
 			numFirstLiteral = i
 		} else {
 			continue
 		}
 	}
 
-	for i := 0; i < len(SignsArray); i++ {
-		if SignsArray[i] == lastLiteral {
+	for i := 0; i < len(signsArray); i++ {
+		if signsArray[i] == lastLiteral {
 			numLastLiteral = i
 		} else {
 			continue
@@ -100,7 +100,7 @@ func crypting(signArr []string, Rotor1 [162]string, Rotor2, Rotor3 [162]int) str
 		// Поиск Третьего Индекса по значению у = z
 		indexForMirror := findIndexInRotor(indexForRotor3, Rotor3)
 		// Поиск Индекса в Отражателе по z = Хх
-		indexFromMirror := Mirror[indexForMirror]
+		indexFromMirror := mirror[indexForMirror]
 		// Поиск значения в Роторе3 2 1 по индексу Хх = Уу
 		result := Rotor1[Rotor2[Rotor3[indexFromMirror]]]
 		allResult += result
@@ -137,7 +137,7 @@ func findIndexInRotor(s int, rotor [162]int) int {
 func checkLenKey(key string) bool {
 	keyArr := convertStringToArray(key)
 
-	if len(keyArr) > len(SignsArray) {
+	if len(keyArr) > len(signsArray) {
 		return false
 	} else {
 		return true
@@ -147,8 +147,8 @@ func checkLenKey(key string) bool {
 func checkWrongSing(arr []string) (bool, string) {
 	check := false
 	for indexOfEnterText := 0; indexOfEnterText < len(arr); indexOfEnterText++ {
-		for indexOfBaseSingarr := 0; indexOfBaseSingarr < len(SignsArray); indexOfBaseSingarr++ {
-			if arr[indexOfEnterText] != SignsArray[indexOfBaseSingarr] {
+		for indexOfBaseSingarr := 0; indexOfBaseSingarr < len(signsArray); indexOfBaseSingarr++ {
+			if arr[indexOfEnterText] != signsArray[indexOfBaseSingarr] {
 				check = true
 			} else {
 				check = false

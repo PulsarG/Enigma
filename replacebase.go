@@ -3,11 +3,11 @@ package enigma
 func replaceSignArray(n int) [162]string {
 	var newSignArr [162]string
 
-	for i := 0; i < len(SignsArray); i++ {
-		sign := SignsArray[i]
+	for i := 0; i < len(signsArray); i++ {
+		sign := signsArray[i]
 		if i < n {
 			j := i
-			j += len(SignsArray)
+			j += len(signsArray)
 			j -= n
 			newSignArr[j] = sign
 		} else {
@@ -23,11 +23,11 @@ func replaceSignArray(n int) [162]string {
 func replaceRotor(n int) [162]int {
 	var newSignArr [162]int
 
-	for i := 0; i < len(Mirror); i++ {
-		sign := Mirror[i]
+	for i := 0; i < len(mirror); i++ {
+		sign := mirror[i]
 		if i < n {
 			j := i
-			j += len(Mirror)
+			j += len(mirror)
 			j -= n
 			newSignArr[j] = sign
 		} else {
