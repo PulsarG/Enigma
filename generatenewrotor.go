@@ -49,3 +49,7 @@ func checkErrorsInArr() bool {
 	}
 	return ok
 }
+
+func SetCustomRotor(rotor [162]int) {
+	mirror = rotor
+}
