@@ -1,6 +1,8 @@
 # Enigma - Encryption system
 
-Work in progress.
+Work in progress. ver 1.1.0
+
+> Implemented the generation of a new (individual) rotor for encryption. Provides additional protection.
 
 Currently available:
 
@@ -54,6 +56,18 @@ Else:
 + message that the password is missing (password is required)
 
 > bool - false
+
+### Generate New Rotor
+
+> The method must be called BEFORE the Start Encryption ( StartCrypt() ).
+
+>If the new Rotor is used in encryption, but not saved in a file, then it is not possible to decrypt the data in the future.
+
+`NewRotor()`
+
+> return array []int: for save in file
+
+> and return boolean: true - if new rotor generate without errors, else return false
 
 ### Decryption is no different from encryption and proceeds in the same way, using the same method, 
 but the encrypted text is passed in the parameters, and the decrypted text is returned.
