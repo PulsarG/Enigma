@@ -69,5 +69,13 @@ Else:
 
 > and return boolean: true - if new rotor generate without errors, else return false
 
+### Set Custom Rotor
+
+> BEFOR Encryption
+
+`SetCustomRotor( rotor[]int )`
+
+> rotor[]int - Previously saved array from NewRotor() method
+
 ### Decryption is no different from encryption and proceeds in the same way, using the same method, 
 but the encrypted text is passed in the parameters, and the decrypted text is returned.
